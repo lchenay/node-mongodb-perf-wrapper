@@ -1,5 +1,7 @@
 # node-mongodb-perf-wrapper
 
+[![Build Status](https://travis-ci.org/suprememoocow/node-mongodb-perf-wrapper.svg)](https://travis-ci.org/suprememoocow/node-mongodb-perf-wrapper)
+
 Monkey patch mongodb to obtain query performance metrics.
 
 ```shell
