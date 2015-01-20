@@ -1,6 +1,6 @@
 {
   "name": "mongodb-perf-wrapper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Query performance monitoring for node-mongodb-native",
   "main": "lib/wrap.js",
   "scripts": {
