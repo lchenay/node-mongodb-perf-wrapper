@@ -13,7 +13,7 @@ describe('wrap', function() {
       wrapper.wrap(mongodb, function(collection, operation, timeMicroSeconds, query, err) {
         assert(collection);
         assert(operation);
-        assert(timeMicroSeconds > 0);
+        assert(timeMicroSeconds >= 0);
         assert(timeMicroSeconds < 100000);
         assert(query);
         assert(!err);
