@@ -1,6 +1,16 @@
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+- '0.11'
+- '0.10'
 services:
-  - mongodb
+- mongodb
+deploy:
+  provider: npm
+  email: andrewn@datatribe.net
+  api_key:
+    secure: G4wB2lZRmYWX7pvfKa5zB+VyO4E5Dvp8QY5R7zWoXqo/GZJzVnlFAt+10HoX+0MC3GG7UE49ubX+BjnpWCDLGkbxDke9KifLiAvZckLAcXHw27CHLRkvwyyF+EnuFbVjQsBcizojE/0fhENmtim2Y7LyktchpkE+IaQgwkcf/sY=
+  on:
+    tags: true
+    repo: suprememoocow/node-mongodb-perf-wrapper
+    branch: master
+
