@@ -11,12 +11,12 @@ describe('wrap', function() {
   describe('it should wrap the library', function() {
     beforeEach(function(done) {
       wrapper.wrap(mongodb, function(collection, operation, timeMicroSeconds, query, err) {
-        assert(collection);
-        assert(operation);
-        assert(timeMicroSeconds >= 0);
-        assert(timeMicroSeconds < 100000);
-        assert(query);
-        assert(!err);
+        assert(collection, 'Expected a collection in the perf callback');
+        assert(operation, 'Expected an operation in the perf callback');
+        assert(timeMicroSeconds >= 0, 'Expected time to be greater than zero. Was ' + timeMicroSeconds + 'ms');
+        assert(timeMicroSeconds < 1000000, 'Expected time to be less than one second zero. Was ' + timeMicroSeconds + 'ms');
+        assert(query, 'Expected a query object');
+        assert(!err, 'Expected no error, got ' + err);
 
         var key = collection + '.' + operation;
 
